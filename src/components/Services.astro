@@ -1,5 +1,7 @@
 ---
 import Dialog from "./Dialog.astro";
+import imgCameras from "../assets/cameras.png";
+import imgGamingWhiteSetup from "../assets/gaming-white-setup.png"
 ---
 
 <div class="text-white bg-black" id="servicios">
@@ -17,7 +19,7 @@ import Dialog from "./Dialog.astro";
 				</div>
 				<div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
 				  <div class="absolute inset-x-1 top-10 bottom-1 overflow-hidden">
-					<img class="size-full object-scale-down" src="/src/assets/cameras.png" alt="Cámaras de seguridad Villagrán Guanajuato SPS Soluciones Pro-System">
+					<img class="size-full object-scale-down" src={imgCameras.src} alt="Cámaras de seguridad Villagrán Guanajuato SPS Soluciones Pro-System">
 				  </div>
 				</div>
 			  </div>
@@ -62,7 +64,7 @@ import Dialog from "./Dialog.astro";
 				<div class="relative min-h-[30rem] w-full grow">
 					<div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
 						<div class="absolute inset-x-[5px] top-8 bottom-1 overflow-hidden rounded-3xl">
-							<img class="size-full object-cover" src="/src/assets/gaming-white-setup.png" alt="Gaming y Accesorios para computadora Villagrán Guanajuato SPS Soluciones Pro-System">
+							<img class="size-full object-cover" src={imgGamingWhiteSetup.src} alt="Gaming y Accesorios para computadora Villagrán Guanajuato SPS Soluciones Pro-System">
 						</div>
 					</div>
 				</div>

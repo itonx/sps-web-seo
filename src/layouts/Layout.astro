@@ -1,22 +1,55 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Start from "../components/Start.astro";
+import '../styles/global.css';
+const { title } = Astro.props;
+---
 <!doctype html>
 <html lang="en">
-	<head>
+	<head> 
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-black"> 
+		<Header/>
 		<slot />
+		<Footer/>
+		<Start/>
+		<script type='text/javascript'>
+			const header = document.getElementById('header')
+			const btnStart = document.getElementById('btnStart')
+			window.onscroll = function(ev) {
+				if(window.scrollY > 150) {
+					header.style.backgroundColor = "black";
+				}
+				else{
+					header.style.backgroundColor = "transparent";
+				}
+				if(window.scrollY > window.innerHeight-150) {
+					header.style.borderBottom = "solid 1px #6a7282"; 
+					btnStart.style.display = "block";
+				}
+				else{
+					header.style.border = "solid 0px"; 
+					btnStart.style.display = "none";
+				}
+			};
+		
+			function goToSectionById(idValue)
+			{
+				const services = document.getElementById(idValue);
+				services.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest", });
+				return false
+			}
+
+			function openDialog(idValue) {
+				const dialog = document.getElementById(idValue);
+				dialog.showModal();
+			}
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

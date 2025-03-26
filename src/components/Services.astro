@@ -1,0 +1,91 @@
+---
+import Dialog from "./Dialog.astro";
+---
+
+<div class="text-white bg-black" id="servicios">
+	<div class="bg-black py-24 sm:py-32">
+		<div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+			<p class="mx-auto max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Servicios y Ventas</p>
+		  <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+			<div class="relative lg:row-span-2 ">
+			  <div class="absolute inset-px rounded-lg bg-black lg:rounded-l-[2rem] "></div>
+			  <div onclick="return openDialog('cctvMoreInfo')" class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] border-solid border-2 border-gray-500">
+				<div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Cámaras de seguridad (CCTV)</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Instalación y configuración para negocios, empresas y particulares.</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Contamos con las mejores marcas.</p>
+				</div>
+				<div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+				  <div class="absolute inset-x-1 top-10 bottom-1 overflow-hidden">
+					<img class="size-full object-scale-down" src="/src/assets/cameras.png" alt="Cámaras de seguridad Villagrán Guanajuato SPS Soluciones Pro-System">
+				  </div>
+				</div>
+			  </div>
+			  <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
+			</div>
+			<div class="relative max-lg:row-start-1">
+			  <div class="absolute inset-px rounded-lg max-lg:rounded-t-[2rem]"></div>
+			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border-solid border-2 border-gray-500">
+				<div class="px-8 pt-8 sm:px-10 sm:pt-10">
+				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Software y equipo de cómputo</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Formateamos tu equipo y respaldamos tu información.</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Contamos con software para diseño gráfico, ofimática, contabilidad y más.</p>
+				</div>
+				<div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+				  <img class="w-15 max-lg:max-w-15" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/windows.png" alt="Formateo de computadoras Villagrán Guanajuato SPS Soluciones Pro-System">
+				  <img class="w-15 max-lg:max-w-15" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/linux.png" alt="Instalación de software Villagrán Guanajuato SPS Soluciones Pro-System">
+				</div>
+			  </div>
+			  <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-t-[2rem]"></div>
+			</div>
+			<div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+			  <div class="absolute inset-px rounded-lg"></div>
+			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]  border-solid border-2 border-gray-500">
+				<div class="px-8 pt-8 sm:px-10 sm:pt-10">
+				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Celulares y tablets</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Liberamos o reparamos tu celular. También ofrecemos equipos a la venta</p>
+				</div>
+				<div class="@container flex flex-1 items-center justify-center max-lg:py-6 lg:pb-2">
+				  <img class="w-25 max-lg:max-w-25" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/android.png" alt="Android Celulares y Tablets Villagrán Guanajuato SPS Soluciones Pro-System">
+				  <img class="w-25 max-lg:max-w-25" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/ios.png" alt="Apple celulares Villagrán Guanajuato SPS Soluciones Pro-System">
+				</div>
+			  </div>
+			  <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
+			</div>
+			<div class="relative lg:row-span-2">
+			  <div class="absolute inset-px rounded-lg max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]  border-solid border-2 border-gray-500">
+				<div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Gaming y accesorios</p>
+				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Laptops, tarjetas de video, audífonos gamer, sillas gamer y más.</p>
+				</div>
+				<div class="relative min-h-[30rem] w-full grow">
+					<div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+						<div class="absolute inset-x-[5px] top-8 bottom-1 overflow-hidden rounded-3xl">
+							<img class="size-full object-cover" src="/src/assets/gaming-white-setup.png" alt="Gaming y Accesorios para computadora Villagrán Guanajuato SPS Soluciones Pro-System">
+						</div>
+					</div>
+				</div>
+			  </div>
+			  <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+<dialog id="cctvMoreInfo" class="bg-black text-white border-solid border-2 border-gray-500 rounded-lg p-10 left-[50%] top-[50%] w-[75%] transform translate-[-50%] backdrop-blur-sm backdrop-brightness-75 backdrop:bg-black/70">
+	<form method="dialog" class="h-full flex flex-col">
+		<h2 class="mt-2 text-3xl font-bold tracking-tight text-red-600 max-lg:text-center">Cámaras de seguridad (CCTV)</h2>
+		<div class="my-15 space-y-5">
+			<p class="justify-center text-white text-lg">
+				En SPS, ofrecemos soluciones de CCTV de última tecnología para brindarte seguridad, tranquilidad y protección en todo momento.
+			</p>
+			<p> 
+				Nuestro equipo de profesionales altamente capacitados está comprometido a proporcionar un servicio personalizado y adaptado a las necesidades específicas de cada cliente
+			</p>
+		</div>
+		<menu class="my-4 self-center absolute bottom-0">
+			<button class="cursor-pointer underline text-2xl">Cerrar</button>
+		</menu>
+	</form>
+</dialog>

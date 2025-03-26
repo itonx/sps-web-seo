@@ -20,36 +20,42 @@ const { title } = Astro.props;
 		<Footer/>
 		<Start/>
 		<script type='text/javascript'>
-			const header = document.getElementById('header')
-			const btnStart = document.getElementById('btnStart')
-			window.onscroll = function(ev) {
-				if(window.scrollY > 150) {
-					header.style.backgroundColor = "black";
+			window.addEventListener('load', function() {
+				const header = document.getElementById('header')
+				const btnStart = document.getElementById('btnStart')
+				function handleOnScroll(ev) {
+					if(window.scrollY > 150) {
+						header.style.backgroundColor = "black";
+					}
+					else{
+						header.style.backgroundColor = "transparent";
+					}
+					if(window.scrollY > window.innerHeight-150) {
+						header.style.borderBottom = "solid 1px #6a7282"; 
+						btnStart.style.display = "block";
+					}
+					else{
+						header.style.border = "solid 0px"; 
+						btnStart.style.display = "none";
+					}
 				}
-				else{
-					header.style.backgroundColor = "transparent";
-				}
-				if(window.scrollY > window.innerHeight-150) {
-					header.style.borderBottom = "solid 1px #6a7282"; 
-					btnStart.style.display = "block";
-				}
-				else{
-					header.style.border = "solid 0px"; 
-					btnStart.style.display = "none";
-				}
-			};
-		
-			function goToSectionById(idValue)
-			{
-				const services = document.getElementById(idValue);
-				services.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest", });
-				return false
-			}
 
-			function openDialog(idValue) {
-				const dialog = document.getElementById(idValue);
-				dialog.showModal();
-			}
+				window.onscroll = handleOnScroll;
+			
+				function goToSectionById(idValue)
+				{
+					const services = document.getElementById(idValue);
+					services.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest", });
+					return false
+				}
+
+				function openDialog(idValue) {
+					const dialog = document.getElementById(idValue);
+					dialog.showModal();
+				}
+
+				handleOnScroll(null);
+			})
 		</script>
 	</body>
 </html>

@@ -25,7 +25,7 @@ import Dialog from "./Dialog.astro";
 			</div>
 			<div class="relative max-lg:row-start-1">
 			  <div class="absolute inset-px rounded-lg max-lg:rounded-t-[2rem]"></div>
-			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border-solid border-2 border-gray-500">
+			  <div onclick="return openDialog('softwareMoreInfo')" class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border-solid border-2 border-gray-500">
 				<div class="px-8 pt-8 sm:px-10 sm:pt-10">
 				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Software y equipo de cómputo</p>
 				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Formateamos tu equipo y respaldamos tu información.</p>
@@ -40,7 +40,7 @@ import Dialog from "./Dialog.astro";
 			</div>
 			<div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
 			  <div class="absolute inset-px rounded-lg"></div>
-			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]  border-solid border-2 border-gray-500">
+			  <div onclick="return openDialog('mobileMoreInfo')" class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]  border-solid border-2 border-gray-500">
 				<div class="px-8 pt-8 sm:px-10 sm:pt-10">
 				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Celulares y tablets</p>
 				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Liberamos o reparamos tu celular. También ofrecemos equipos a la venta</p>
@@ -54,7 +54,7 @@ import Dialog from "./Dialog.astro";
 			</div>
 			<div class="relative lg:row-span-2">
 			  <div class="absolute inset-px rounded-lg max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-			  <div class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]  border-solid border-2 border-gray-500">
+			  <div onclick="return openDialog('gamingMoreInfo')" class="hover:shadow-[0_0_10px_2px_rgba(0,0,0,0.3)] hover:shadow-gray-200 shadow-none transition-shadow duration-300 cursor-pointer relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]  border-solid border-2 border-gray-500">
 				<div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
 				  <p class="mt-2 text-lg font-medium tracking-tight text-red-600 max-lg:text-center">Gaming y accesorios</p>
 				  <p class="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">Laptops, tarjetas de video, audífonos gamer, sillas gamer y más.</p>
@@ -73,19 +73,7 @@ import Dialog from "./Dialog.astro";
 		</div>
 	  </div>
 </div>
-<dialog id="cctvMoreInfo" class="bg-black text-white border-solid border-2 border-gray-500 rounded-lg p-10 left-[50%] top-[50%] w-[75%] transform translate-[-50%] backdrop-blur-sm backdrop-brightness-75 backdrop:bg-black/70">
-	<form method="dialog" class="h-full flex flex-col">
-		<h2 class="mt-2 text-3xl font-bold tracking-tight text-red-600 max-lg:text-center">Cámaras de seguridad (CCTV)</h2>
-		<div class="my-15 space-y-5">
-			<p class="justify-center text-white text-lg">
-				En SPS, ofrecemos soluciones de CCTV de última tecnología para brindarte seguridad, tranquilidad y protección en todo momento.
-			</p>
-			<p> 
-				Nuestro equipo de profesionales altamente capacitados está comprometido a proporcionar un servicio personalizado y adaptado a las necesidades específicas de cada cliente
-			</p>
-		</div>
-		<menu class="my-4 self-center absolute bottom-0">
-			<button class="cursor-pointer underline text-2xl">Cerrar</button>
-		</menu>
-	</form>
-</dialog>
+<Dialog id="cctvMoreInfo" title="Cámaras de seguridad (CCTV)" description="En SPS, ofrecemos soluciones de CCTV de última tecnología para brindarte seguridad, tranquilidad y protección en todo momento. Nuestro equipo de profesionales altamente capacitados está comprometido a proporcionar un servicio personalizado y adaptado a las necesidades específicas de cada cliente."/>
+<Dialog id="softwareMoreInfo" title="Software y equipos de cómputo" description="Ofrecemos soluciones completas en software y equipos de cómputo adaptados a tus necesidades, ya sea para tu hogar o tu empresa. Nuestro compromiso es proporcionarte herramientas de alta calidad que optimicen tu productividad y rendimiento. ¡Contáctanos hoy para una consulta personalizada!"/>
+<Dialog id="mobileMoreInfo" title="Celulares y tablets" description="Tenemos la mejor selección de celulares y tablets de las marcas más reconocidas, siempre a la vanguardia de la tecnología. Te ofrecemos dispositivos de alta calidad, ideales para mantenerte conectado, trabajar o disfrutar del entretenimiento."/>
+<Dialog id="gamingMoreInfo" title="Gaming y accesorios" description="Somos apasionados del gaming y por eso te ofrecemos los mejores accesorios y equipos para que vivas una experiencia de juego única. Ya seas un jugador profesional o un aficionado, tenemos todo lo que necesitas para mejorar tu rendimiento y disfrutar al máximo."/>

@@ -1,33 +1,17 @@
 ---
-const { id, open } = Astro.props;
+const { id, title, description } = Astro.props;
 ---
 
-<script>
-  export interface Props {
-    id: string;
-    open: boolean;
-  }
-</script>
-
-<dialog id="{id}">
-    <slot name="main" />
-    <form method="dialog">
-      <slot name="close" />
-    </form>
+<dialog id={id} class="bg-black text-white border-solid border-2 border-gray-500 rounded-lg p-10 left-[50%] top-[50%] w-[65%] transform translate-[-50%] backdrop-blur-sm backdrop-brightness-75 backdrop:bg-black/70">
+	<form method="dialog" class="h-full flex flex-col">
+		<h2 class="mt-2 text-3xl font-bold tracking-tight text-red-600 text-center">{title}</h2>
+		<div class="my-15 space-y-5">
+			<p class="text-lg">
+                {description}
+			</p>
+		</div>
+		<menu class="my-4 self-center absolute bottom-0">
+			<button class="cursor-pointer underline text-2xl !outline-none">Cerrar</button>
+		</menu>
+	</form>
 </dialog>
-<style> 
-    dialog {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      &::backdrop {
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background: rgba(255, 0, 0, 0.1);
-      }
-    }
-  </style>

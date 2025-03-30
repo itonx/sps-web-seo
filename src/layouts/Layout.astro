@@ -6,13 +6,27 @@ import '../styles/global.css';
 const { title } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head> 
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<meta property="og:url" content="https://solucionesprosystem.com"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:title" content="Soluciones Pro-System"/>
+		<meta property="og:description" content="La tecnología hecha para ti"/>
+		<meta property="og:image" content="https://solucionesprosystem.com/sps.png"/>
+		<meta property="og:locale" content="es_ES"/>
+		
+		<meta name="description" content="Soluciones Pro-System, la tecnología hecha para ti"/>
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:site" content="https://www.instagram.com/spmmaste/"/>
+		<meta name="twitter:creator" content="https://www.facebook.com/juan.orec"/>
+		<meta name="twitter:title" content="Soluciones Pro-System"/>
+		<meta name="twitter:description" content="La tecnología hecha para ti"/>
 	</head>
 	<body class="bg-black"> 
 		<Header/>

@@ -1,6 +1,4 @@
 ---
-import Locations from "./Locations.astro";
-import Services from "./Services.astro";
 import imgSpsLanding from '../assets/sps-landing-background.png';
 import spsRobot from '../assets/sps-robot.webp';
 ---
@@ -13,7 +11,7 @@ import spsRobot from '../assets/sps-robot.webp';
 		<div class="text-white lg:text-4xl md:text-3xl text-2xl flex justify-center mt-10">
 			La tecnología hecha para ti
 		</div>	
-		<div class="mx-auto mt-10 grid gap-0 grid-cols-3 py-5 px-1 space-y-5 cursor-pointer group">
+		<a href="/servicios" class="mx-auto mt-10 grid gap-0 grid-cols-3 py-5 px-1 space-y-5 cursor-pointer group">
 			<div class="col-start-1 row-start-1 col-span-3">
 				<span class="border-0 backdrop-invert backdrop-opacity-1 bg-black/30 p-2 rounded-2xl text-lg text-white max-lg:text-center">Software y equipos de cómputo</span>
 			</div>
@@ -23,7 +21,7 @@ import spsRobot from '../assets/sps-robot.webp';
 				</div>
 			</div>				
 			<div class="col-start-1 md:col-start-2 row-start-3 md:row-start-2 col-span-3 md:col-span-1 mx-10">
-				<img title="Ver servicios" class="w-50 min-w-50 align-middle table-cell mx-auto cursor-pointer group-hover:drop-shadow-[0px_0px_15px_rgba(255,255,255,.5)] drop-shadow-none transition duration-300 group-hover:scale-105 origin-center" src={spsRobot.src} alt="Ver Servicios" onclick='return goToSectionById("servicios")'/>
+				<img title="Ver servicios" class="w-50 min-w-50 align-middle table-cell mx-auto cursor-pointer group-hover:drop-shadow-[0px_0px_15px_rgba(255,255,255,.5)] drop-shadow-none transition duration-300 group-hover:scale-105 origin-center" src={spsRobot.src} alt="Ver Servicios"'/>
 			</div>
 			<div class="col-start-1 md:col-start-3 row-start-4 md:row-start-2 table col-span-3 md:col-span-1">
 				<div class="text-white align-middle table-cell text-lg text-center md:text-left">
@@ -33,8 +31,6 @@ import spsRobot from '../assets/sps-robot.webp';
 			<div class="col-start-1 row-start-5 md:row-start-3 col-span-3">
 				<span class="border-0 backdrop-invert backdrop-opacity-1 bg-black/30 p-2 rounded-2xl text-lg text-white max-lg:text-center">Cámaras de seguridad (CCTV)</span>
 			</div>				
-		</div>
+		</a>
 	</div>
-</div> 
-<Services/>
-<Locations/>
+</div>

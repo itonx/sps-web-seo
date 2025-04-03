@@ -1,6 +1,6 @@
 # SPS
 
-Official page: https://www.solucionesprosystem.com/
+Official page: https://solucionesprosystem.com/
 
 > This project was created with [Astro](https://astro.build/).
 

@@ -1,38 +1,106 @@
 ---
 import imgProcessor from '../assets/processor.svg'
 ---
-<nav id="header" class="fixed top-0 left-0 w-full z-10 bg-transparent pb-1">
-	<div class="flex justify-between items-center w-[90%] mx-auto py-4.5">
-        <div class="group">
-            <img src={imgProcessor.src} class="h-[75px] absolute -z-10 bottom-[0.4rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"/>
-			<a href="/" class="text-red-600 text-2xl font-extrabold px-4 py-2 rounded-lg  group-hover:text-red-600 transition-colors duration-800 ml-[0.7rem]">
-				SPS
-			</a>
-		</div>
-		<div class="flex items-center space-x-1">
-            <a href="/servicios" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
-				Servicios
-			</a> 
-            <a href="/ubicaciones" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
-				Ubicaciones
-			</a> 
-            <a href="https://www.instagram.com/spmmaste/" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
-                <span class="[&>svg]:h-5 [&>svg]:w-5">
-                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                </span>
-            </a>
-            <a href="https://www.facebook.com/juan.orec" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
-                <span class="[&>svg]:h-5 [&>svg]:w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 320 512">
-                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                      <path
-                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+<header>
+    <nav id="header" class="fixed top-0 left-0 w-full z-10 bg-transparent pb-1 pt-3">
+        <div class="flex justify-between items-center w-[90%] mx-auto py-4.5">
+            <div class="group cursor-pointer">
+                <img src={imgProcessor.src} class="h-[75px] absolute bottom-0 sm:bottom-[0.4rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"/>
+                <a href="/" class="text-red-600 text-2xl font-extrabold px-4 py-2 rounded-lg  group-hover:text-red-600 transition-colors duration-800 ml-[0.7rem]">
+                    SPS
+                </a>
+            </div>
+            <div class="hidden sm:flex items-center space-x-1">
+                <a href="/servicios" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
+                    Servicios
+                </a> 
+                <a href="/ubicaciones" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
+                    Ubicaciones
+                </a> 
+                <a href="https://www.instagram.com/spmmaste/" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
+                    <span class="[&>svg]:h-5 [&>svg]:w-5">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    </span>
+                </a>
+                <a href="https://www.facebook.com/juan.orec" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
+                    <span class="[&>svg]:h-5 [&>svg]:w-5">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 320 512">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                        <path
+                            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="flex sm:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-red-600 cursor-pointer" onclick="showMobileMenu()">
+                  <span class="sr-only">Abrir menú</span>
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="hidden" role="dialog" aria-modal="true" id="mobileMenu">
+        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <div class="group relative flex items-center cursor-pointer">
+                    <img src={imgProcessor.src} class="h-[75px] absolute bottom-[-0.8rem] left-1.5"/>
+                    <a href="/" class="text-red-600 text-2xl font-extrabold px-4 py-2 rounded-lg  group-hover:text-red-600 transition-colors duration-800 ml-[0.7rem]">
+                        SPS
+                    </a>
+                </div>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-red-600 cursor-pointer" onclick="hideMobileMenu()">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
-                </span>
-            </a>
-		</div>
-	</div>
-</nav>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <div class="-mx-3">
+                            <div class="mt-2 space-y-2" id="disclosure-1">
+                                <a href="/servicios" class="block rounded-lg py-2 pr-3 pl-6 text-white text-xl hover:bg-gray-500">Servicios</a>
+                                <a href="/ubicaciones" class="block rounded-lg py-2 pr-3 pl-6 text-white text-xl hover:bg-gray-500">Ubicaciones</a>
+                                <div class="flex justify-center space-x-2 mt-4">
+                                    <a href="https://www.instagram.com/spmmaste/" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
+                                        <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                        </span>
+                                    </a>
+                                    <a href="https://www.facebook.com/juan.orec" target="_blank" class="text-white text-xl px-2 py-2 rounded-lg border-2 border-transparent hover:border-red-500 hover:border-2 hover:text-red-600 transition-colors duration-300 cursor-pointer">
+                                        <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                            <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 320 512">
+                                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                            <path
+                                                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type='text/javascript'>
+    function showMobileMenu() {
+      document.getElementById("mobileMenu").style.display = "block";
+    }
+    function hideMobileMenu() {
+      document.getElementById("mobileMenu").style.display = "none";
+    }
+</script>

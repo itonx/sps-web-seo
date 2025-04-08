@@ -5,7 +5,7 @@ import imgProcessor from '../assets/processor.svg'
     <nav id="header" class="fixed top-0 left-0 w-full z-10 bg-transparent pb-1 pt-3">
         <div class="flex justify-between items-center w-[90%] mx-auto py-4.5">
             <div class="group cursor-pointer">
-                <img src={imgProcessor.src} class="h-[75px] absolute bottom-0 sm:bottom-[0.4rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"/>
+                <img src={imgProcessor.src} class="h-[75px] -z-10 absolute bottom-0 sm:bottom-[0.4rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"/>
                 <a href="/" class="text-red-600 text-2xl font-extrabold px-4 py-2 rounded-lg  group-hover:text-red-600 transition-colors duration-800 ml-[0.7rem]">
                     SPS
                 </a>
@@ -50,7 +50,7 @@ import imgProcessor from '../assets/processor.svg'
         <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <div class="group relative flex items-center cursor-pointer">
-                    <img src={imgProcessor.src} class="h-[75px] absolute bottom-[-0.8rem] left-1.5"/>
+                    <img src={imgProcessor.src} class="h-[75px] -z-10 absolute bottom-[-0.8rem] left-1.5"/>
                     <a href="/" class="text-red-600 text-2xl font-extrabold px-4 py-2 rounded-lg  group-hover:text-red-600 transition-colors duration-800 ml-[0.7rem]">
                         SPS
                     </a>

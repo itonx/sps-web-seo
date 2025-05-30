@@ -1,12 +1,12 @@
 # SPS
 
-Official page: https://solucionesprosystem.com/
+Official page: <a href="https://solucionesprosystem.com/" target="_blank">Soluciones Pro-System</a>
 
-> This project was created with [Astro](https://astro.build/).
+> This project was created with <a href="https://astro.build/" target="_blank">Astro</a>.
 
 ## 💻 Deployment
 
-Hosted on [Azure Static Web App](https://azure.microsoft.com/en-us/products/app-service/static).
+Hosted on <a href="https://azure.microsoft.com/en-us/products/app-service/static" target="_blank">Azure Static Web App</a>.
 
 The deployment is triggered by a GitHub action which is executed when a new tag is created.
 

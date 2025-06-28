@@ -36,18 +36,19 @@ export default function Store() {
         setDisplayEmptyStore(false);
         setDisplayErrorAPI(false);
         const res = await fetch(`${origin}/api/store`);
-        console.log(res);
+        // console.log(res);
         if (res.ok) {
           const data = await res.json();
           setData(data);
-        }
-        if (res.status === 404) {
-          setDisplayEmptyStore(true);
         } else {
-          setDisplayErrorAPI(true);
+          if (res.status === 404) {
+            setDisplayEmptyStore(true);
+          } else {
+            setDisplayErrorAPI(true);
+          }
         }
       } catch (error) {
-        console.error("Error fetching items");
+        // console.error("Error fetching items");
       } finally {
         setIsLoading(false);
       }
@@ -90,12 +91,10 @@ export default function Store() {
 
   function nextImage() {
     const finalIndex = currentImageIndex + 1;
-    console.log(finalIndex, currentImages.length);
+
     if (finalIndex >= currentImages.length) {
-      console.log(currentImages[0]);
       setCurrentImageIndex(0);
     } else {
-      console.log(currentImages[finalIndex]);
       setCurrentImageIndex(finalIndex);
     }
   }
@@ -109,14 +108,15 @@ export default function Store() {
       if (res.ok) {
         const data = await res.json();
         setData(data);
-      }
-      if (res.status === 404) {
-        setDisplayEmptyStore(true);
       } else {
-        setDisplayErrorAPI(true);
+        if (res.status === 404) {
+          setDisplayEmptyStore(true);
+        } else {
+          setDisplayErrorAPI(true);
+        }
       }
     } catch (error) {
-      console.error("Error fetching items");
+      // console.error("Error fetching items");
     } finally {
       setIsLoading(false);
       scrollToTop();
@@ -235,15 +235,15 @@ export default function Store() {
                 <div className="lg:ml-5 row-start-2 col-start-1 lg:row-start-1 lg:col-start-2 lg:col-span-2 text-white border-r-1 rounded-r-xl border-r-gray-800 border-l-0">
                   <div className="flex flex-col gap-2">
                     <div className="min-h-20 flex items-center justify-center lg:justify-start">
-                      <div className="align-middle font-bold text-2xl line-clamp-2 text-overflow-ellipsis overflow-hidden">
+                      <div className="align-middle font-bold text-2xl line-clamp-2 text-overflow-ellipsis overflow-hidden first-letter:uppercase">
                         {item.title}
                       </div>
                     </div>
                     <div className="text-3xl line-clamp-1 text-overflow-ellipsis overflow-hidden text-green-400 font-semibold">
                       {formatPrice(item.total)}
                     </div>
-                    <div className="min-h-10">
-                      <button type="link">{item.description}</button>
+                    <div className="min-h-10 first-letter:uppercase">
+                      {item.description}
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,8 @@
 ---
 import imgProcessor from '../assets/processor.svg'
 ---
-<header>
-    <nav id="header" class="fixed top-0 left-0 w-full z-10 bg-transparent pb-1 pt-3">
+<header class="w-full top-0 fixed z-50">
+    <nav id="header" class="left-0 w-full z-10 pb-1 pt-3 max-h-[94px]">
         <div class="flex justify-between items-center w-[90%] mx-auto py-4.5">
             <div class="group cursor-pointer">
                 <img src={imgProcessor.src} class="h-[75px] -z-10 absolute bottom-0 sm:bottom-[0.4rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"/>
@@ -11,6 +11,9 @@ import imgProcessor from '../assets/processor.svg'
                 </a>
             </div>
             <div class="hidden sm:flex items-center space-x-1">
+                <a href="/tienda" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
+                    Tienda
+                </a> 
                 <a href="/servicios" class="text-white text-xl px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
                     Servicios
                 </a> 
@@ -67,6 +70,7 @@ import imgProcessor from '../assets/processor.svg'
                     <div class="space-y-2 py-6">
                         <div class="-mx-3">
                             <div class="mt-2 space-y-2" id="disclosure-1">
+                                <a href="/tienda" class="block rounded-lg py-2 pr-3 pl-6 text-white text-xl hover:bg-gray-500">Tienda</a>
                                 <a href="/servicios" class="block rounded-lg py-2 pr-3 pl-6 text-white text-xl hover:bg-gray-500">Servicios</a>
                                 <a href="/ubicaciones" class="block rounded-lg py-2 pr-3 pl-6 text-white text-xl hover:bg-gray-500">Ubicaciones</a>
                                 <div class="flex justify-center space-x-2 mt-4">

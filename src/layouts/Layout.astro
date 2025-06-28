@@ -31,7 +31,9 @@ const { title } = Astro.props;
 	</head>
 	<body class="bg-black"> 
 		<Header/>
-		<slot />
+		<div class="pt-[94px] px-[20px]">
+			<slot />
+		</div>
 		<Footer/>
 		<Start/>
 		<script type='text/javascript'>
@@ -45,8 +47,8 @@ const { title } = Astro.props;
 				else{
 					header.style.backgroundColor = "transparent";
 				}
-				if(window.scrollY > window.innerHeight-minHeight) {
-					header.style.borderBottom = "solid 1px #6a7282"; 
+				if(window.scrollY > 300) {
+					//header.style.borderBottom = "solid 1px #6a7282"; 
 					btnStart.style.display = "block";
 				}
 				else{
@@ -59,9 +61,10 @@ const { title } = Astro.props;
 		
 			function goToSectionById(idValue)
 			{
-				const services = document.getElementById(idValue);
-				services.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest", });
-				return false
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth", // Optional smooth scrolling
+				});
 			}
 
 			function openDialog(idValue) {

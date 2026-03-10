@@ -35,6 +35,12 @@ docker run --rm -d --name sps-web-seo-test -p 5001:5001 sps-web-seo:latest
 
 Go to https://localhost:5001
 
+or
+
+```bash
+curl -I http://127.0.0.1:5001/
+```
+
 # Docker compose
 
 ## Build
@@ -52,6 +58,12 @@ docker compose down
 ## Test
 
 Go to https://localhost:5001
+
+or
+
+```bash
+curl -I http://127.0.0.1:5001/
+```
 
 ## Remove dangling images
 

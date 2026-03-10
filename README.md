@@ -16,3 +16,45 @@ Create a new tag:
 git tag vX.X.X
 git push origin --tags
 ```
+
+# Docker file
+
+## Build
+
+```bash
+docker build -t sps-web-seo:latest
+```
+
+## Run
+
+```bash
+docker run --rm -d --name sps-web-seo-test -p 5001:5001 sps-web-seo:latest
+```
+
+## Test
+
+Go to https://localhost:5001
+
+# Docker compose
+
+## Build
+
+```bash
+docker compose up --build -d
+```
+
+## Stop
+
+```bash
+docker compose down
+```
+
+## Test
+
+Go to https://localhost:5001
+
+## Remove dangling images
+
+```bash
+docker image prune
+```

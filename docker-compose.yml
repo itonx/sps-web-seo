@@ -1,0 +1,17 @@
+services:
+  web:
+    container_name: sps-web-seo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sps-web-seo:latest
+    ports:
+      - "127.0.0.1:5001:5001"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
